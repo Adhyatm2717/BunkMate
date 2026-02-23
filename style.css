@@ -11,6 +11,7 @@
     align-items: center;
     height: 100vh;
     width: 100vw;
+    /* border-radius: 20; */
     /* text-align: center; */
 }
 .container{
@@ -21,7 +22,7 @@
     
 }
 .header{
-    padding: 10px;
+    padding: 20px;
     background-color: #384353;
     width: 100%;
     border-top-left-radius: 20px;
@@ -31,10 +32,13 @@
     /* height: 30px; */
     color: white;
     font-weight: 300;
+    
 }
 .main{
     padding: 20px;
     background-color: #e9eff7;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 form{
     display: grid;
@@ -111,6 +115,12 @@ form input{
     grid-area: small3;
     /* height: 60px; */
 
+}
+#small3 p{
+    color: #384353;
+    position: relative;
+    left: 10px;
+    bottom: 25px;
 }
 #small1 input, #small2 input, #small3 input{
     height:100px;
