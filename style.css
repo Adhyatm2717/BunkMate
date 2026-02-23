@@ -44,6 +44,7 @@ form{
     "top1 top1 top1 top2 top2 top2"
     "mid1 mid1 mid1 mid2 mid2 mid2"
     "small1 small1 small2 small2 small3 small3"
+    "small1 small1 small2 small2 small3 small3"
     "below1 below1 below1 below1 below1 below1"
     "below2 below2 below2 below2 below2 below2";
     padding: 20px;
@@ -55,74 +56,107 @@ form input{
     box-shadow:
         inset 6px 6px 12px rgba(0, 0, 0, 0.173),   /* light bottom-right */
         inset -6px -6px 12px rgba(255, 255, 255, 0.462);     /* dark top-left */
-    height: 40px;
+    /* height: 40px; */
     border-radius: 10px;
     padding:15px;
     /* margin: 10px; */
     font-size: 20px;
     color: #384353;
-    width: 200px;
-
+    width: 100%;
 }
+
 #top1{
     grid-area: top1;
     /* height:30px; */
-    width: 100%;
+    width: 250px;
     /* padding: 10px; */
 }
 #top2{
     grid-area: top2;
     /* height:30px; */
-    width: 100%;
+    width: 250px;
+    
 
 
 }
 #mid1{
     grid-area: mid1;
-    width: 100%;
+    /* width: 100%; */
+    width: 250px;
+
     /* height:30px; */
 
 }
 #mid2{
     grid-area: mid2;
     /* height:30px; */
-    width: 100%;
-
-
+    width: 250px;
 }
 #small1{
     grid-area: small1;
-    /* height:60px; */
-    width: 100%;
-    border:1px solid black;
-
-
+    width: 160px;
+    height: 130px;
 }
+
 #small2{
     grid-area: small2;
     /* height:60px; */
-    width: 100%;
-    border:1px solid black;
+    width: 160px;
+    height:130px;
+    /* border:1px solid black; */
 
     
 }
 #small3{
     grid-area: small3;
     /* height: 60px; */
-    width: 100%;
-    border:1px solid black;
-
 
 }
+#small1 input, #small2 input, #small3 input{
+    height:100px;
+    width: 150px;
+    box-shadow: 
+     6px 6px 12px rgba(0, 0, 0, 0.33),   /* light bottom-right */
+        -6px -6px 12px rgba(255, 255, 255, 0.919);     /* dark top-left */
+}
+#small1 label, #small2 label, #small3 label{
+    position: relative;
+    top: 45px;
+    left: 10px;
+    color: #384353;
+}
+
 #bottom1{
     grid-area: below1;
     /* height:30px; */
-    width: 100%;
-    border:1px solid black;
+    /* width: 480px; */
+    /* border:1px solid black; */
+    text-align: center;
 }
 #bottom2{
     grid-area: below2;
     /* height:30px; */
+    /* width: 480px; */
+    /* border:1px solid black; */
+    text-align: center;
+
+}
+#bottom1 button, #bottom2 button{
+    background-color: transparent;
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+    color: #384353;
+    box-shadow: 
+     6px 6px 12px rgba(0, 0, 0, 0.33),   /* light bottom-right */
+        -6px -6px 12px rgba(255, 255, 255, 0.919);     /* dark top-left */
     width: 100%;
-    border:1px solid black;
+    height: 40px;
+}
+#bottom1 button:active, #bottom2 button:active{
+    color: #384353;
+    box-shadow: 
+     inset 6px 6px 12px rgba(0, 0, 0, 0.33),   /* light bottom-right */
+       inset -6px -6px 12px rgba(255, 255, 255, 0.919);     /* dark top-left */
+    color: #384353b6;
 }

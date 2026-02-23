@@ -16,25 +16,40 @@
                 <form>
                     <div id="top1">
                         <label for="ClassAttended">Classes Attended</label><br>
-                        <input type="text" id="ClassAttended"><br>
+                        <input type="number" id="ClassAttended"><br>
                     </div>
                     <div id="top2">
                         <label for="TotalClasses">Total Classes</label><br>
-                        <input type="text" id="TotalClasses"><br>
+                        <input type="number" id="TotalClasses"><br>
                     </div>
                     <div id="mid1">
                         <label for="MissClasses">Plan to Bunk</label><br>
-                        <input type="text" id="MissClasses" value="0"><br>
+                        <input type="number" id="MissClasses" value="0"><br>
                     </div>
                     <div id="mid2">
                         <label for="TargetAttendence">Target %</label><br>
-                        <input type="text" id="TargetAttendence" value="75"><br>
+                        <input type="number" id="TargetAttendence" value="75">
                     </div>
-                    <div id="small1"></div>
-                    <div id="small2"></div>
-                    <div id="small3"></div>
-                    <div id="bottom1"></div>
-                    <div id="bottom2"></div>
+                    <div id="small1">
+                        <label for="current">Current</label><br><br>
+                        <input type="number" id="current" readonly><br>
+                    </div>
+                    <div id="small2">
+                        <label for="predicted">Predicted</label><br><br>
+                        <input type="number" id="predicted" readonly><br>
+                    </div>
+                    <div id="small3">
+                        <label for="Recovery">Recovery</label><br><br>
+                        <input type="number" id="Recovery" readonly><br>
+                        <br>
+                    </div>
+                    <div id="bottom1">
+                        <button id="submitBtn">Submit</button>
+                        <br>
+                    </div>
+                    <div id="bottom2">
+                        <button type="reset">Reset</button>
+                    </div>
                 </form>
             </div>
         </div>
