@@ -7,8 +7,7 @@ document.getElementById("submitBtn").addEventListener("click", function() {
 
     // console.log((ClassAttended / TotalClasses) * 100)
     const currentPerc = (ClassAttended / TotalClasses) * 100;
-    document.getElementById("current").value = currentPerc.toFixed(0
-    );
+    document.getElementById("current").value = currentPerc.toFixed(0);
 
     const predicedAttend = (ClassAttended / (TotalClasses + MissClasses) * 100)
     document.getElementById("predicted").value = predicedAttend.toFixed(0)
@@ -17,5 +16,5 @@ document.getElementById("submitBtn").addEventListener("click", function() {
     const RecoveryClasses = (((TargetAttendence * TotalClasses)-ClassAttended * 100)/(100-TargetAttendence))
     document.getElementById("Recovery").value = RecoveryClasses.toFixed(0)
 
-
+    console.log(`current:${currentPerc}, predict: ${predicedAttend}, recovery: ${RecoveryClasses}`)
 })
