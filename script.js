@@ -13,7 +13,8 @@ document.getElementById("submitBtn").addEventListener("click", function() {
     const predicedAttend = (ClassAttended / (TotalClasses + MissClasses) * 100)
     document.getElementById("predicted").value = predicedAttend.toFixed(0)
 
-    const RecoveryClasses = (TotalClasses * 3)/(ClassAttended * 4 * 25)
+    // const RecoveryClasses = (TotalClasses * TargetAttendence)/(ClassAttended * 100 * 25)
+    const RecoveryClasses = (((TargetAttendence * TotalClasses)-ClassAttended * 100)/(100-TargetAttendence))
     document.getElementById("Recovery").value = RecoveryClasses.toFixed(0)
 
 
