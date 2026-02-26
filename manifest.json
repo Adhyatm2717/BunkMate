@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "BunkMate",
+  "version": "1.0",
+  "description": "An attendance tracker and calculator.",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "BunkMate",
+    "default_icon": "Favicon.png"
+  },
+  "icons": {
+    "16": "Favicon.png",
+    "32": "Favicon.png",
+    "48": "Favicon.png",
+    "128": "Favicon.png"
+  }
+}

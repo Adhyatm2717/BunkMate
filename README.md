@@ -102,87 +102,101 @@ The app calculates the smallest integer value of `x` that satisfies this inequal
 
 ## 🚀 Installation & Local Setup
 
-### 1. Clone the repository
+### Option 1: As a Web Application
 
-```bash
-git clone https://github.com/Adhyatm2717/BunkMate.git
-cd BunkMate
-3. Run locally
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Adhyatm2717/BunkMate.git
+   cd BunkMate
+   ```
 
-Since this is a static web application:
+2. **Run locally**
+   Since this is a static web application:
+   - Open `index.html` in your browser OR
+   - Use **Live Server** in VS Code.
 
-Open index.html in your browser
-OR
+### Option 2: As a Google Chrome Extension
 
-Use Live Server in VS Code
+BunkMate now supports running completely offline as a lightweight Chrome Extension inside your browser!
 
-🧑‍💻 Usage
+1. **Download/Clone the Repository**
+2. Open Google Chrome and navigate to `chrome://extensions/`
+3. Turn on **Developer mode** in the top right corner.
+4. Click **Load unpacked** in the top left.
+5. Select the `BunkMate` folder.
+6. Pin the extension to your browser bar for quick access!
 
-Enter total classes conducted
+---
 
-Enter classes attended
+## 🧑‍💻 Usage
 
-View current attendance percentage
+1. Enter total classes conducted.
+2. Enter classes attended.
+3. View current attendance percentage.
+4. Add planned bunks to see predicted percentage.
+5. Enter target percentage to calculate minimum required recovery classes.
+*(All calculations update instantly)*
 
-Add planned bunks to see predicted percentage
+---
 
-Enter target percentage to calculate required recovery classes
+## 📂 Project Structure
 
-All calculations update instantly.
-
-📂 Project Structure
+```text
 BunkMate/
 │
-├── index.html
-├── style.css
-├── script.js
-├── screenshots/
-│   ├── dashboard.png
-│   ├── prediction.png
-│   └── recovery.png
-└── README.md
-🔮 Future Improvements
+├── index.html        # Main App Interface
+├── style.css         # Styling & Responsive Design (Extension & Web)
+├── script.js         # Core Mathematical Logic
+├── manifest.json     # Chrome Extension Configuration
+├── Favicon.png       # Icons
+└── README.md         # Documentation
+```
 
-📈 Attendance trend visualization (charts)
+---
 
-📅 Semester-wise tracking
+## 🔮 Future Improvements
 
-💾 Local storage persistence
+## � Future Improvements
 
-🔐 User authentication
+- �📈 Attendance trend visualization (charts)
+- 📅 Semester-wise tracking
+- 💾 Local storage persistence
+- 🔐 User authentication
+- 📱 Progressive Web App (PWA) support
+- 🧠 Smart attendance recommendations
 
-📱 Progressive Web App (PWA) support
+---
 
-🧠 Smart attendance recommendations
+## 🤝 Contributing
 
-🤝 Contributing
+Contributions are welcome!
 
-Contributions are welcome.
+1. Fork the repository
+2. Create a new branch
+3. Commit your changes
+4. Open a Pull Request
 
-Fork the repository
+*For major changes, please open an issue first.*
 
-Create a new branch
+---
 
-Commit your changes
-
-Open a Pull Request
-
-For major changes, please open an issue first.
-
-📜 License
+## 📜 License
 
 This project is licensed under the MIT License.
 
-👨‍💻 Author
+---
 
-Adhyatm Mudgal
-B.Tech CSE (AI & ML)
-Newton School of Technology
+## 👨‍💻 Author
 
-GitHub: https://github.com/Adhyatm2717
+**Adhyatm Mudgal**  
+B.Tech CSE (AI & ML)  
+Newton School of Technology  
 
-Live Project: https://bunkmate-eta.vercel.app/
+- **GitHub:** [Adhyatm2717](https://github.com/Adhyatm2717)
+- **Live Project:** [bunkmate-eta.vercel.app](https://bunkmate-eta.vercel.app/)
 
-⭐ Support
+---
 
-If you found this project useful, consider giving it a ⭐ on GitHub.
+## ⭐ Support
+
+If you found this project useful, consider giving it a ⭐ on GitHub!

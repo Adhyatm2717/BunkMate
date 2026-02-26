@@ -1,27 +1,43 @@
-*{
+* {
     box-sizing: border-box;
     padding: 0%;
     margin: 0%;
     /* text-align: center; */
 }
-.box{
+
+/* ADDED FOR EXTENSION COMPATIBILITY 
+   This forces the Chrome Extension popup window to map itself to 
+   the appropriate size for the hardcoded grid, without breaking
+   normal 100vw/100vh behavior on regular web loading.
+*/
+body {
+    min-width: 600px;
+    min-height: 600px;
+    margin: 0;
+}
+
+/* END ADDED COMPAT */
+
+.box {
     background-color: #d0dae6;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
+    width: 100%;
     /* border-radius: 20; */
     /* text-align: center; */
 }
-.container{
+
+.container {
     border-radius: 20px;
     box-shadow: 10px -10px 20px #b2bcc8, -10px 10px 20px #b2bcc89c;
-    
-    
-    
+
+
+
 }
-.header{
+
+.header {
     padding: 20px;
     background-color: #384353;
     width: 100%;
@@ -32,58 +48,65 @@
     /* height: 30px; */
     color: white;
     font-weight: 300;
-    
+
 }
-.main{
+
+.main {
     padding: 20px;
     background-color: #e9eff7;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
-form{
+
+form {
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-areas: 
-    "top1 top1 top1 top2 top2 top2"
-    "mid1 mid1 mid1 mid2 mid2 mid2"
-    "small1 small1 small2 small2 small3 small3"
-    "small1 small1 small2 small2 small3 small3"
-    "below1 below1 below1 below1 below1 below1"
-    "below2 below2 below2 below2 below2 below2";
+    grid-template-areas:
+        "top1 top1 top1 top2 top2 top2"
+        "mid1 mid1 mid1 mid2 mid2 mid2"
+        "small1 small1 small2 small2 small3 small3"
+        "small1 small1 small2 small2 small3 small3"
+        "below1 below1 below1 below1 below1 below1"
+        "below2 below2 below2 below2 below2 below2";
     padding: 20px;
-    
+
 }
-form input{
+
+form input {
     background-color: transparent;
     border: transparent;
     box-shadow:
-        inset 6px 6px 12px rgba(0, 0, 0, 0.173),   /* light bottom-right */
-        inset -6px -6px 12px rgba(255, 255, 255, 0.462);     /* dark top-left */
+        inset 6px 6px 12px rgba(0, 0, 0, 0.173),
+        /* light bottom-right */
+        inset -6px -6px 12px rgba(255, 255, 255, 0.462);
+    /* dark top-left */
     /* height: 40px; */
     border-radius: 10px;
-    padding:15px;
+    padding: 15px;
     /* margin: 10px; */
     font-size: 20px;
     color: #384353;
     width: 100%;
 }
 
-#top1{
+#top1 {
     grid-area: top1;
     /* height:30px; */
     width: 250px;
     /* padding: 10px; */
 }
-#top2{
+
+#top2 {
     grid-area: top2;
     /* height:30px; */
     width: 250px;
-    
+
 
 
 }
-#mid1{
+
+#mid1 {
     grid-area: mid1;
     /* width: 100%; */
     width: 250px;
@@ -91,59 +114,74 @@ form input{
     /* height:30px; */
 
 }
-#mid2{
+
+#mid2 {
     grid-area: mid2;
     /* height:30px; */
     width: 250px;
 }
-#small1{
+
+#small1 {
     grid-area: small1;
     width: 160px;
     height: 130px;
 }
 
-#small2{
+#small2 {
     grid-area: small2;
     /* height:60px; */
     width: 160px;
-    height:130px;
+    height: 130px;
     /* border:1px solid black; */
 
-    
+
 }
-#small3{
+
+#small3 {
     grid-area: small3;
     /* height: 60px; */
 
 }
-#small3 p{
+
+#small3 p {
     color: #384353;
     position: relative;
     left: 10px;
     bottom: 25px;
 }
-#small1 input, #small2 input, #small3 input{
-    height:100px;
+
+#small1 input,
+#small2 input,
+#small3 input {
+    height: 100px;
     width: 150px;
-    box-shadow: 
-     6px 6px 12px rgba(0, 0, 0, 0.33),   /* light bottom-right */
-        -6px -6px 12px rgba(255, 255, 255, 0.919);     /* dark top-left */
+    box-shadow:
+        6px 6px 12px rgba(0, 0, 0, 0.33),
+        /* light bottom-right */
+        -6px -6px 12px rgba(255, 255, 255, 0.919);
+    /* dark top-left */
 }
-#small1 label, #small2 label, #small3 label{
+
+#small1 label,
+#small2 label,
+#small3 label {
     position: relative;
     top: 45px;
     left: 10px;
     color: #384353;
+    white-space: nowrap;
+    /* Ensures text never wraps unexpectedly */
 }
 
-#bottom1{
+#bottom1 {
     grid-area: below1;
     /* height:30px; */
     /* width: 480px; */
     /* border:1px solid black; */
     text-align: center;
 }
-#bottom2{
+
+#bottom2 {
     grid-area: below2;
     /* height:30px; */
     /* width: 480px; */
@@ -151,22 +189,30 @@ form input{
     text-align: center;
 
 }
-#bottom1 button, #bottom2 button{
+
+#bottom1 button,
+#bottom2 button {
     background-color: transparent;
     border: none;
     border-radius: 20px;
     font-size: 20px;
     color: #384353;
-    box-shadow: 
-     6px 6px 12px rgba(0, 0, 0, 0.33),   /* light bottom-right */
-        -6px -6px 12px rgba(255, 255, 255, 0.919);     /* dark top-left */
+    box-shadow:
+        6px 6px 12px rgba(0, 0, 0, 0.33),
+        /* light bottom-right */
+        -6px -6px 12px rgba(255, 255, 255, 0.919);
+    /* dark top-left */
     width: 100%;
     height: 40px;
 }
-#bottom1 button:active, #bottom2 button:active{
+
+#bottom1 button:active,
+#bottom2 button:active {
     color: #384353;
-    box-shadow: 
-     inset 6px 6px 12px rgba(0, 0, 0, 0.33),   /* light bottom-right */
-       inset -6px -6px 12px rgba(255, 255, 255, 0.919);     /* dark top-left */
+    box-shadow:
+        inset 6px 6px 12px rgba(0, 0, 0, 0.33),
+        /* light bottom-right */
+        inset -6px -6px 12px rgba(255, 255, 255, 0.919);
+    /* dark top-left */
     color: #384353b6;
 }
